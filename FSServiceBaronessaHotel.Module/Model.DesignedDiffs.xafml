@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="FSServiceBaronessaHotel" PreferredLanguage="ru">
+  <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.EF.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Booking" ImageName="Travel_DoorHanger" />
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.BookingServices" ImageName="Travel_Beach" />
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Guests" ImageName="NewCustomer">
+      <OwnMembers>
+        <Member Name="PassportNumber" Size="0" EditMask="00 00 000000" />
+        <Member Name="Phone" EditMask="+0 (000) 000 00 00" />
+      </OwnMembers>
+    </Class>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Rooms" ImageName="Actions_Home" />
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Services" ImageName="Travel_Cafe" />
+  </BOModel>
+  <Options>
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="25.1.4.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+  </Views>
+</Application>

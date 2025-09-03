@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="CalculateTotalAmount" Caption="Пересчитать сумму" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Booking" Caption="Бронирование">
+      <OwnMembers>
+        <Member Name="CheckInDate" Caption="Дата заселения" />
+        <Member Name="CheckOutDate" Caption="Дата выселения" />
+        <Member Name="Guest" Caption="Гость" />
+        <Member Name="Room" Caption="Комната" />
+        <Member Name="Services" Caption="Доп. услуги" />
+        <Member Name="Status" Caption="Статус" />
+        <Member Name="TotalAmount" Caption="Итоговая стоимость" />
+      </OwnMembers>
+    </Class>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.BookingServices" Caption="Услуги бронирования">
+      <OwnMembers>
+        <Member Name="Booking" Caption="Бронирование" />
+        <Member Name="Quantity" Caption="Количество услуг в день" />
+        <Member Name="Service" Caption="Услуга" />
+      </OwnMembers>
+    </Class>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Guests" Caption="Гости">
+      <OwnMembers>
+        <Member Name="FirstName" Caption="Имя" />
+        <Member Name="LastName" Caption="Фамилия" />
+        <Member Name="PassportNumber" EditMask="00-00 000000" Caption="Паспорт" />
+        <Member Name="Phone" Caption="Телефон" />
+      </OwnMembers>
+    </Class>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Rooms" Caption="Комнаты">
+      <OwnMembers>
+        <Member Name="IsAvaible" Caption="Не занято" />
+        <Member Name="PricePerNight" Caption="Цена за ночь" />
+        <Member Name="RoomNumber" Caption="Номер комнаты" />
+        <Member Name="RoomType" Caption="Тип комнаты" />
+      </OwnMembers>
+    </Class>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.RoomType" Caption="Типы комнат">
+      <OwnMembers>
+        <Member Name="Description" Caption="Описание" />
+        <Member Name="MaxOccupancy" Caption="Мак человек" />
+        <Member Name="Name" Caption="Название" />
+      </OwnMembers>
+    </Class>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Services" Caption="Доп. услуги">
+      <OwnMembers>
+        <Member Name="Name" Caption="Название" />
+        <Member Name="Price" Caption="Цена" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Captions">
+      <LocalizationItem Name="View" Value="View" />
+    </LocalizationGroup>
+  </Localization>
+  <Validation>
+    <Rules>
+      <RuleValueComparison Id="Price_GreaterThanZero" CustomMessageTemplate="Цена должна быть выше 0" />
+      <RuleValueComparison Id="RoomNumber_GreaterThanZero" CustomMessageTemplate="Номер комнаты должен быть выше чем 0" />
+      <RuleRequiredField Id="RuleRequiredField for Booking.Guest" CustomMessageTemplate="Гость должен быть указан" />
+      <RuleRequiredField Id="RuleRequiredField for Booking.Room" CustomMessageTemplate="Комната бронирования должна быть указана" />
+      <RuleRequiredField Id="RuleRequiredField for BookingServices.Booking" CustomMessageTemplate="Бронь должна быть указана" />
+      <RuleRequiredField Id="RuleRequiredField for Guests.FirstName" CustomMessageTemplate="Имя должно быть указано" />
+      <RuleRequiredField Id="RuleRequiredField for Guests.PassportNumber" CustomMessageTemplate="Номер паспорта должен быть указан" />
+      <RuleRequiredField Id="RuleRequiredField for RoomType.Name" CustomMessageTemplate="Название типа комнаты должно быть указано" />
+    </Rules>
+  </Validation>
+</Application>
