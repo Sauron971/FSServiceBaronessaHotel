@@ -5,4 +5,21 @@
       <Action Id="CalculateTotalAmount" Caption="Recalc total amount" />
     </Actions>
   </ActionDesign>
+  <BOModel>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Booking">
+      <OwnMembers>
+        <Member Name="DisplayName" Caption="Booking" />
+      </OwnMembers>
+    </Class>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Guests">
+      <OwnMembers>
+        <Member Name="DisplayName" Caption="Guest" />
+      </OwnMembers>
+    </Class>
+    <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Rooms">
+      <OwnMembers>
+        <Member Name="DisplayName" Caption="Room" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
 </Application>

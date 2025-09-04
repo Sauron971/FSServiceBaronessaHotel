@@ -24,8 +24,10 @@ namespace FSServiceBaronessaHotel.Module.BusinessObjects
         public virtual int PricePerNight { get; set; }
         public virtual bool IsAvaible { get; set; }
 
-
-        [Browsable(false)]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [VisibleInLookupListView(true)]
+        [ReadOnly(true)]
         public string DisplayName => $"{RoomNumber} {RoomType}";
     }
 }

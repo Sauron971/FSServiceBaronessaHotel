@@ -33,15 +33,15 @@
             labelCopyright = new DevExpress.XtraEditors.LabelControl();
             labelStatus = new DevExpress.XtraEditors.LabelControl();
             peImage = new DevExpress.XtraEditors.PictureEdit();
-            peLogo = new DevExpress.XtraEditors.PictureEdit();
             pcApplicationName = new DevExpress.XtraEditors.PanelControl();
             labelSubtitle = new DevExpress.XtraEditors.LabelControl();
             labelApplicationName = new DevExpress.XtraEditors.LabelControl();
+            peLogo = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)progressBarControl.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)peImage.Properties).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)peLogo.Properties).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcApplicationName).BeginInit();
             pcApplicationName.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)peLogo.Properties).BeginInit();
             SuspendLayout();
             // 
             // progressBarControl
@@ -91,18 +91,6 @@
             peImage.TabIndex = 9;
             peImage.Visible = false;
             // 
-            // peLogo
-            // 
-            peLogo.Location = new Point(400, 328);
-            peLogo.Name = "peLogo";
-            peLogo.Properties.AllowFocused = false;
-            peLogo.Properties.Appearance.BackColor = Color.Transparent;
-            peLogo.Properties.Appearance.Options.UseBackColor = true;
-            peLogo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            peLogo.Properties.ShowMenu = false;
-            peLogo.Size = new Size(70, 20);
-            peLogo.TabIndex = 8;
-            // 
             // pcApplicationName
             // 
             pcApplicationName.Appearance.BackColor = Color.FromArgb(255, 114, 0);
@@ -141,6 +129,18 @@
             labelApplicationName.TabIndex = 0;
             labelApplicationName.Text = "Hotel Baroness";
             // 
+            // peLogo
+            // 
+            peLogo.Location = new Point(400, 328);
+            peLogo.Name = "peLogo";
+            peLogo.Properties.AllowFocused = false;
+            peLogo.Properties.Appearance.BackColor = Color.Transparent;
+            peLogo.Properties.Appearance.Options.UseBackColor = true;
+            peLogo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            peLogo.Properties.ShowMenu = false;
+            peLogo.Size = new Size(70, 20);
+            peLogo.TabIndex = 8;
+            // 
             // XafSplashScreen
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
@@ -158,10 +158,10 @@
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)progressBarControl.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)peImage.Properties).EndInit();
-            ((System.ComponentModel.ISupportInitialize)peLogo.Properties).EndInit();
             ((System.ComponentModel.ISupportInitialize)pcApplicationName).EndInit();
             pcApplicationName.ResumeLayout(false);
             pcApplicationName.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)peLogo.Properties).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -171,10 +171,10 @@
         private DevExpress.XtraEditors.MarqueeProgressBarControl progressBarControl;
         private DevExpress.XtraEditors.LabelControl labelCopyright;
         private DevExpress.XtraEditors.LabelControl labelStatus;
-        private DevExpress.XtraEditors.PictureEdit peLogo;
         private DevExpress.XtraEditors.PictureEdit peImage;
         private DevExpress.XtraEditors.PanelControl pcApplicationName;
         private DevExpress.XtraEditors.LabelControl labelSubtitle;
         private DevExpress.XtraEditors.LabelControl labelApplicationName;
+        private DevExpress.XtraEditors.PictureEdit peLogo;
     }
 }

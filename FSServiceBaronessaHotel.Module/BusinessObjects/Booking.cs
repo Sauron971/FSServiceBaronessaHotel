@@ -30,8 +30,10 @@ namespace FSServiceBaronessaHotel.Module.BusinessObjects
         public virtual ObservableCollection<BookingServices> Services { get; }
         = new ObservableCollection<BookingServices>();
 
-
-        [Browsable(false)]
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [VisibleInLookupListView(true)]
+        [ReadOnly(true)]
         public string DisplayName => $"{Guest} {Room}";
 
         public void RecalculateTotal()

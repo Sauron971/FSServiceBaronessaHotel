@@ -10,6 +10,7 @@
       <OwnMembers>
         <Member Name="CheckInDate" Caption="Дата заселения" />
         <Member Name="CheckOutDate" Caption="Дата выселения" />
+        <Member Name="DisplayName" Caption="Бронирование" />
         <Member Name="Guest" Caption="Гость" />
         <Member Name="Room" Caption="Комната" />
         <Member Name="Services" Caption="Доп. услуги" />
@@ -26,6 +27,7 @@
     </Class>
     <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Guests" Caption="Гости">
       <OwnMembers>
+        <Member Name="DisplayName" Caption="Гость" />
         <Member Name="FirstName" Caption="Имя" />
         <Member Name="LastName" Caption="Фамилия" />
         <Member Name="PassportNumber" EditMask="00-00 000000" Caption="Паспорт" />
@@ -34,6 +36,7 @@
     </Class>
     <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Rooms" Caption="Комнаты">
       <OwnMembers>
+        <Member Name="DisplayName" Caption="Комната" />
         <Member Name="IsAvaible" Caption="Не занято" />
         <Member Name="PricePerNight" Caption="Цена за ночь" />
         <Member Name="RoomNumber" Caption="Номер комнаты" />

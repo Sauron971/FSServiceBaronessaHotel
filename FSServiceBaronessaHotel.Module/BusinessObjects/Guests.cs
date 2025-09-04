@@ -29,7 +29,10 @@ namespace FSServiceBaronessaHotel.Module.BusinessObjects
       "A Passport Number must be specified")]
         public virtual string PassportNumber {  get; set; }
 
-        [Browsable(false)] 
+        [VisibleInListView(false)]
+        [VisibleInDetailView(false)]
+        [VisibleInLookupListView(true)]
+        [ReadOnly(true)]
         public string DisplayName => $"{FirstName} {LastName}";
     }
 }
