@@ -3,6 +3,7 @@
   <ActionDesign>
     <Actions>
       <Action Id="CalculateTotalAmount" Caption="Пересчитать сумму" />
+      <Action Id="Logon" Caption="Вход" />
     </Actions>
   </ActionDesign>
   <BOModel>
@@ -20,40 +21,41 @@
     </Class>
     <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.BookingServices" Caption="Услуги бронирования">
       <OwnMembers>
-        <Member Name="Booking" Caption="Бронирование" />
+        <Member Name="Booking" Caption="Бронирование" ToolTip="У какого бронирования заказана доп. услуга" />
         <Member Name="Quantity" Caption="Количество услуг в день" />
-        <Member Name="Service" Caption="Услуга" />
+        <Member Name="Service" Caption="Услуга" ToolTip="Какая доп. услуга заказана" />
       </OwnMembers>
     </Class>
     <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Guests" Caption="Гости">
       <OwnMembers>
         <Member Name="DisplayName" Caption="Гость" />
+        <Member Name="Email" ToolTip="Эл. почта типа nam@mail.ru" />
         <Member Name="FirstName" Caption="Имя" />
         <Member Name="LastName" Caption="Фамилия" />
-        <Member Name="PassportNumber" EditMask="00-00 000000" Caption="Паспорт" />
-        <Member Name="Phone" Caption="Телефон" />
+        <Member Name="PassportNumber" EditMask="00-00 000000" Caption="Паспорт" ToolTip="Серия и номер паспорта из 10 цифр" />
+        <Member Name="Phone" Caption="Телефон" ToolTip="Телефон гостя" />
       </OwnMembers>
     </Class>
     <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Rooms" Caption="Комнаты">
       <OwnMembers>
         <Member Name="DisplayName" Caption="Комната" />
-        <Member Name="IsAvaible" Caption="Не занято" />
+        <Member Name="IsAvaible" Caption="Не занято" ToolTip="Комната свободна?" />
         <Member Name="PricePerNight" Caption="Цена за ночь" />
         <Member Name="RoomNumber" Caption="Номер комнаты" />
-        <Member Name="RoomType" Caption="Тип комнаты" />
+        <Member Name="RoomType" Caption="Тип комнаты" ToolTip="Тип комнаты (Люкс, Стандарт, Президентский)" />
       </OwnMembers>
     </Class>
     <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.RoomType" Caption="Типы комнат">
       <OwnMembers>
-        <Member Name="Description" Caption="Описание" />
-        <Member Name="MaxOccupancy" Caption="Мак человек" />
-        <Member Name="Name" Caption="Название" />
+        <Member Name="Description" Caption="Описание" ToolTip="Описание типа комнаты" />
+        <Member Name="MaxOccupancy" Caption="Макс человек" ToolTip="Максимальная вместимость в номере" />
+        <Member Name="Name" Caption="Название" ToolTip="Название типа комнаты" />
       </OwnMembers>
     </Class>
     <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Services" Caption="Доп. услуги">
       <OwnMembers>
-        <Member Name="Name" Caption="Название" />
-        <Member Name="Price" Caption="Цена" />
+        <Member Name="Name" Caption="Название" ToolTip="Название доп. услуги" />
+        <Member Name="Price" Caption="Цена" ToolTip="Цена за одну проведенную услугу" />
       </OwnMembers>
     </Class>
   </BOModel>
@@ -74,4 +76,11 @@
       <RuleRequiredField Id="RuleRequiredField for RoomType.Name" CustomMessageTemplate="Название типа комнаты должно быть указано" />
     </Rules>
   </Validation>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_Blazor_DetailView" Caption="Вход" />
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" Caption="Вход" />
+    <DetailView Id="AuthenticationStandardLogonParameters_Win_DetailView" Caption="Вход" />
+    <DetailView Id="NoPasswordLogonParameters_DetailView" Caption="Вход" />
+    <DetailView Id="NoPasswordLogonParameters_Win_DetailView" Caption="Вход" />
+  </Views>
 </Application>

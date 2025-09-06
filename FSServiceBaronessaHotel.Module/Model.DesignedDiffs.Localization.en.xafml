@@ -3,6 +3,7 @@
   <ActionDesign>
     <Actions>
       <Action Id="CalculateTotalAmount" Caption="Recalc total amount" />
+      <Action Id="Logon" Caption="Log In" />
     </Actions>
   </ActionDesign>
   <BOModel>
@@ -22,4 +23,11 @@
       </OwnMembers>
     </Class>
   </BOModel>
+  <Views>
+    <DetailView Id="AuthenticationStandardLogonParameters_Blazor_DetailView" Caption="Вход" />
+    <DetailView Id="AuthenticationStandardLogonParameters_DetailView" Caption="Вход" />
+    <DetailView Id="AuthenticationStandardLogonParameters_Win_DetailView" Caption="Вход" />
+    <DetailView Id="NoPasswordLogonParameters_DetailView" Caption="Вход" />
+    <DetailView Id="NoPasswordLogonParameters_Win_DetailView" Caption="Вход" />
+  </Views>
 </Application>

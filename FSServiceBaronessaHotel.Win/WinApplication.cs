@@ -9,6 +9,7 @@ using DevExpress.ExpressApp.Security.ClientServer;
 using DevExpress.ExpressApp.Updating;
 using DevExpress.ExpressApp.Win;
 using DevExpress.ExpressApp.Win.Utils;
+using DevExpress.XtraMap.Drawing.DirectD3D9;
 using FSServiceBaronessaHotel.Module;
 using FSServiceBaronessaHotel.Module.BusinessObjects;
 using Microsoft.EntityFrameworkCore;
@@ -29,11 +30,9 @@ namespace FSServiceBaronessaHotel.Win
         }
         void FSServiceBaronessaHotelWindowsFormsApplication_CustomizeLanguagesList(object sender, CustomizeLanguagesListEventArgs e)
         {
-            string userLanguageName = System.Threading.Thread.CurrentThread.CurrentUICulture.Name;
-            if (userLanguageName != "en-US" && e.Languages.IndexOf(userLanguageName) == -1)
-            {
-                e.Languages.Add(userLanguageName);
-            }
+            e.Languages.Clear();   // Сбросим список, чтоб не мешал
+            e.Languages.Add("en-US");
+            e.Languages.Add("ru-RU");
         }
         void FSServiceBaronessaHotelWindowsFormsApplication_DatabaseVersionMismatch(object sender, DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs e)
         {

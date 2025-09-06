@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="FSServiceBaronessaHotel" PreferredLanguage="ru">
+  <ActionDesign>
+    <Actions>
+      <Action Id="Logon" ShortCaption="A" />
+    </Actions>
+  </ActionDesign>
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.EF.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
     <Class Name="FSServiceBaronessaHotel.Module.BusinessObjects.Booking" ImageName="Travel_DoorHanger" />
